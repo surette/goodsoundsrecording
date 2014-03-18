@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Good Sounds Recording</title>
+	<link rel="stylesheet" href="css/recording.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<script>
+  		$(function() {
+    		$( "#datepicker" ).datepicker();
+  		});
+
+  		jQuery(function($){
+    		var $form = $('#submit'), $field = $form.find('input.name');
+
+    		$form.submit(function(){
+        		if($.trim($field.val()) == ''){
+            		alert('Please enter your name.');
+            		return false;
+        		}
+    		})
+		})
+
+  		jQuery(function($){
+    		var $form = $('#submit'), $field = $form.find('input.email');
+
+    		$form.submit(function(){
+        		if($.trim($field.val()) == ''){
+            		alert('Please enter a valid email.');
+            		return false;
+        		}
+    		})
+		})
+
+		jQuery(function($){
+    		var $form = $('#submit'), $field = $form.find('input.date');
+
+    		$form.submit(function(){
+        		if($.trim($field.val()) == ''){
+            		alert('Please choose a date.');
+            		return false;
+        		}
+    		})
+		})
+  	</script>
+</head>
+
+<body>
+<a id="TOP"></a>
+<div class="navbar">
+<ul class="navbar">
+  <li><a href="index.html" class="here">Home</a></li>
+  <li><a href="reservations.html">Reservations</a></li>
+  <li><a href="services.html">Services</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+
+<!-- Titlebar -->
+<div class="titlebar">
+<h1>Reservations</h1> 
+</div>
+
+<!-- Main content --> 
+<div class="main"> 
+	<form id="reservation" action="reservations.php" method="post">
+		<table>
+			<tr>
+				<td><label for="name">Name:</label></td>
+				<td><input type="text" id="name" name="name" /></td>
+			</tr>
+			<tr>
+				<td><label for="email">Email:</label></td>
+				<td><input type="email" id="email" name="email" /></td>
+			</tr>
+			<tr>
+				<td><label for="date">Date:</label></td>
+				<td><input type="text" id="datepicker" name="date"></label></td>
+			</tr>
+			<tr>
+				<td><label for="studio">Studio:</label></td>
+				<td>
+					<ul>
+						<li>
+							<input type="radio" id="studio" name="studio" value="A" />
+							Studio A $100.00
+						</li>
+						<li>
+							<input type="radio" id="studio" name="studio" value="B" />
+							Studio B $80.00
+						</li>
+						<li>
+							<input type="radio" id="studio" name="studio" value="C" />
+							Studio C $60.00
+						</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Submit" id="submit" /></td>
+			</tr>
+		</table>
+
+
+<hr />
+
+<p><em><a href="credits.html">credits</a></em></p>
+
+</div>
+
+</div>
+
+</body>
+</html>

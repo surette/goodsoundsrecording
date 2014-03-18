@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Good Sounds Recording</title>
+	<link rel="stylesheet" href="css/recording.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="prices.js"></script>
+</head>
+
+<body>
+<a id="TOP"></a>
+<div class="navbar">
+<ul class="navbar">
+  <li><a href="index.html" class="here">Home</a></li>
+  <li><a href="reservations.html">Reservations</a></li>
+  <li><a href="services.html">Services</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+
+<!-- Titlebar -->
+<div class="titlebar">
+<h1>Services</h1> 
+</div>
+
+<!-- Main content --> 
+<div class="main"> 
+
+<form action="" name="services">
+<p>
+<table>
+<tbody>
+<tr>
+	<td id="studios" style="vertical-align:top;">
+		<strong>Studios</strong>
+		<ul>
+			<li>
+				<input type="radio" name="studios" value="100.00" />
+				Studio A $100.00
+			</li>
+			<li>
+				<input type="radio" name="studios" value="80.00" />
+				Studio B $80.00
+			</li>
+			<li>
+				<input type="radio" name="studios" value="60.00" />
+				Studio C $60.00
+			</li>
+		</ul>
+	</td>
+	<td id="instruments" style="vertical-align:top;">
+		<strong>Instruments</strong>
+		<ul>
+			<li>
+				<input type="checkbox" value="30.00" />
+				Drums $30.00
+			</li>
+			<li>
+				<input type="checkbox" value="20.00" />
+				Piano $20.00
+			</li>
+			<li>
+				<input type="checkbox" value="10.00" />
+				Guitar $10.00
+			</li>
+		</ul>
+	</td>
+	<td id="engineering" style="vertical-align:top;">
+		<strong>Engineering</strong>
+		<ul>
+			<li>
+				<input type="checkbox" value="50.00" />
+				Audio mixing $50.00
+			</li>
+		</ul>
+	</td>
+</tr>
+</tbody>
+</table>
+
+<input type="button" value="Get Cost" onClick=showPrices(this.form)>
+
+</form>
+
+</p>
+
+<hr />
+
+<p><em><a href="credits.html">credits</a></em></p>
+
+</div>
+
+</div>
+
+</body>
+</html>
